@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    "transform-react-jsx",
+    "syntax-jsx",
+    "transform-object-rest-spread"
+  ]
+}
