@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Loading from '../components/Loading'
-import Preload from '../components/Preload'
-import KeyboardNav from '../components/KeyboardNav'
-import KeyboardNavItem from '../components/KeyboardNavItem'
+import { Loading, KeyboardNav, KeyboardNavItem } from 'cerebro-ui'
+import Preload from './Preload'
 import getSuggestions from '../getSuggestions'
 import styles from './styles.css'
 
