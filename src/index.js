@@ -34,7 +34,8 @@ const googlePlugin = ({ term, actions, display }) => {
     getPreview: () => <Preview query={term} key={term} search={search} />
   })
 }
-module.exports = {
+
+export default {
   fn: googlePlugin,
   icon: icon,
   order: order
