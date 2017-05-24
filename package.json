@@ -21,7 +21,9 @@
   "main": "dist/index.js",
   "keywords": [
     "cerebro",
-    "cerebro-plugin"
+    "cerebro-extracted-plugin",
+    "google",
+    "search"
   ],
   "devDependencies": {
     "babel-cli": "^6.18.0",
