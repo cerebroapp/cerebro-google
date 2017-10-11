@@ -1,10 +1,11 @@
 import React from 'react'
 
 import Preview from './Preview'
-import icon from './icon.png'
+import iconPath from './icon.png'
 
 const id = 'search-web'
-const order = 11
+export const order = 11
+export const icon = iconPath
 
 /**
  * Search term in google
@@ -13,7 +14,7 @@ const order = 11
  * @param  {Object} options.actions
  * @param  {Function} options.display
  */
-const googlePlugin = ({ term, actions, display }) => {
+export const fn = ({ term, actions, display }) => {
   /**
    * Open browser with google search of term
    * @param  {String} searchTerm
@@ -21,7 +22,7 @@ const googlePlugin = ({ term, actions, display }) => {
   // eslint-disable-next-line no-var
   var search = (searchTerm) => {
     const q = encodeURIComponent(searchTerm)
-    actions.open(`https://google.com/?q=${q}#newwindow=1&q=${q}`)
+    actions.open(`https://www.google.com/search?newwindow=1&q=${q}&cad=h`)
     actions.hideWindow()
   }
 
@@ -33,10 +34,4 @@ const googlePlugin = ({ term, actions, display }) => {
     onSelect: () => search(term),
     getPreview: () => <Preview query={term} key={term} search={search} />
   })
-}
-
-export default {
-  fn: googlePlugin,
-  icon: icon,
-  order: order
 }
